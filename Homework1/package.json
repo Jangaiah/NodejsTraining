@@ -7,12 +7,20 @@
     "start": "nodemon main",
     "task1": "nodemon ./tasks/task1",
     "task2": "nodemon ./tasks/task2",
-    "task3": "nodemon ./tasks/task3",
+    "task3": "babel task3 -d dist && nodemon ./dist/task3",
+    "build": "babel task3 -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "csvtojson": "^2.0.10",
     "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/node": "^7.10.4",
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1"
   }
 }
